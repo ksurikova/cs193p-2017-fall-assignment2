@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set Game View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SetGameViewController" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DhF-sm-VOD">
+                                <rect key="frame" x="5" y="49" width="365" height="220"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y2v-Er-nP7">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZB-kn-bJn" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PCt-FP-I1S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3R-cE-vMe" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="85.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Wr-MX-gPF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsR-gn-EzY" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="186.66666666666666" y="0.0" width="84.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zv2-co-oyN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfu-FV-ycm" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="279.66666666666669" y="0.0" width="85.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T67-m1-igh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bBZ-sP-Dhp">
+                                        <rect key="frame" x="0.0" y="38" width="365" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikl-2D-l0I" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cg1-Hx-t4A"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAR-Z3-ES9" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="85.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfm-zD-mxC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAE-C1-a9f" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="186.66666666666666" y="0.0" width="84.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5p7-ex-hv3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5i-Cp-SoT" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="279.66666666666669" y="0.0" width="85.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDo-Xv-FfZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GGK-2y-e5X">
+                                        <rect key="frame" x="0.0" y="76" width="365" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0B-kk-Jsa" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ka-Yr-9cD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTL-j0-90J" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="85.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D9I-zX-N2D"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-mK-DfN" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="186.66666666666666" y="0.0" width="84.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQD-By-n8K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qes-uI-ou4" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="279.66666666666669" y="0.0" width="85.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mde-gu-8kw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-bJ-xde">
+                                        <rect key="frame" x="0.0" y="114" width="365" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zj-Tj-btK" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SLW-gJ-ekl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6e7-wa-MJg" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="85.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GaL-Bo-PXR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUx-pr-yvF" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="186.66666666666666" y="0.0" width="84.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wTe-DK-JMd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcO-xd-37B" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="279.66666666666669" y="0.0" width="85.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBW-vn-oCc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZAE-4Y-FVV">
+                                        <rect key="frame" x="0.0" y="152" width="365" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svU-gX-PZh" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8s-c6-BUH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="704-EK-s1O" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="85.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3a-k2-jh8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbu-6p-si6" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="186.66666666666666" y="0.0" width="84.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9NC-0A-Cbd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-EX-0CG" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="279.66666666666669" y="0.0" width="85.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5D0-rY-gV8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wzf-EO-s0T">
+                                        <rect key="frame" x="0.0" y="190" width="365" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xk7-uf-nsb" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Pg-9n-aUf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmP-qH-OyB" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="93.333333333333343" y="0.0" width="85.333333333333343" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1BL-Ko-0QY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yw5-JT-757" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="186.66666666666666" y="0.0" width="84.999999999999972" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OBv-fD-4l5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Bb-Xp-dv4" customClass="SetCardButton" customModule="cs193p_2017_fall_assignment2" customModuleProvider="target">
+                                                <rect key="frame" x="279.66666666666669" y="0.0" width="85.333333333333314" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tvG-nH-FLO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nb7-Yw-cny" userLabel="DownStackView">
+                                <rect key="frame" x="5" y="743" width="365" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWO-kA-jnV">
+                                        <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caS-P1-9ow">
+                                        <rect key="frame" x="182.66666666666663" y="0.0" width="182.33333333333337" height="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Play Again"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FC2-dl-8R5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIW-S7-k5h">
+                                <rect key="frame" x="131.66666666666666" y="277" width="112" height="474"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Deal more cards"/>
+                                <connections>
+                                    <action selector="dealMoreCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gaY-us-aZu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nb7-Yw-cny" secondAttribute="bottom" constant="5" id="CH5-nz-NsD"/>
+                            <constraint firstItem="nb7-Yw-cny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="KZ3-dC-2fQ"/>
+                            <constraint firstItem="yIW-S7-k5h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lc3-We-IWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nb7-Yw-cny" secondAttribute="trailing" constant="5" id="Ng2-S8-UtR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DhF-sm-VOD" secondAttribute="trailing" constant="5" id="TkH-Nj-dKx"/>
+                            <constraint firstItem="DhF-sm-VOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="k3c-yB-GEA"/>
+                            <constraint firstItem="yIW-S7-k5h" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nb7-Yw-cny" secondAttribute="top" constant="8" id="nb2-Tz-JP3"/>
+                            <constraint firstItem="DhF-sm-VOD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="rWe-iS-ZOz"/>
+                            <constraint firstItem="yIW-S7-k5h" firstAttribute="top" relation="lessThanOrEqual" secondItem="DhF-sm-VOD" secondAttribute="bottom" constant="8" id="xBk-lf-Zhp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dealCardsButton" destination="yIW-S7-k5h" id="tpk-EE-8IH"/>
+                        <outlet property="scoreLabel" destination="ZWO-kA-jnV" id="h70-fh-Nhg"/>
+                        <outletCollection property="cardButtons" destination="dZB-kn-bJn" collectionClass="NSMutableArray" id="ULq-Fk-nMK"/>
+                        <outletCollection property="cardButtons" destination="f3R-cE-vMe" collectionClass="NSMutableArray" id="yWK-Cg-2n4"/>
+                        <outletCollection property="cardButtons" destination="Lfu-FV-ycm" collectionClass="NSMutableArray" id="O9P-vJ-Fa4"/>
+                        <outletCollection property="cardButtons" destination="VsR-gn-EzY" collectionClass="NSMutableArray" id="cw5-h0-fDM"/>
+                        <outletCollection property="cardButtons" destination="ikl-2D-l0I" collectionClass="NSMutableArray" id="5rt-2m-a1p"/>
+                        <outletCollection property="cardButtons" destination="RAR-Z3-ES9" collectionClass="NSMutableArray" id="fO2-iA-2es"/>
+                        <outletCollection property="cardButtons" destination="kAE-C1-a9f" collectionClass="NSMutableArray" id="fG4-Ze-hrj"/>
+                        <outletCollection property="cardButtons" destination="F5i-Cp-SoT" collectionClass="NSMutableArray" id="Z8H-dH-qZe"/>
+                        <outletCollection property="cardButtons" destination="J0B-kk-Jsa" collectionClass="NSMutableArray" id="pXv-9k-9gO"/>
+                        <outletCollection property="cardButtons" destination="6zj-Tj-btK" collectionClass="NSMutableArray" id="y6Z-aL-wfq"/>
+                        <outletCollection property="cardButtons" destination="svU-gX-PZh" collectionClass="NSMutableArray" id="ttP-4C-3S2"/>
+                        <outletCollection property="cardButtons" destination="xk7-uf-nsb" collectionClass="NSMutableArray" id="8o6-fg-IqY"/>
+                        <outletCollection property="cardButtons" destination="rTL-j0-90J" collectionClass="NSMutableArray" id="ayl-oW-cfu"/>
+                        <outletCollection property="cardButtons" destination="6e7-wa-MJg" collectionClass="NSMutableArray" id="jCM-gc-yHT"/>
+                        <outletCollection property="cardButtons" destination="704-EK-s1O" collectionClass="NSMutableArray" id="vA6-LD-qYy"/>
+                        <outletCollection property="cardButtons" destination="HmP-qH-OyB" collectionClass="NSMutableArray" id="Bvr-yF-xeo"/>
+                        <outletCollection property="cardButtons" destination="Lj8-mK-DfN" collectionClass="NSMutableArray" id="PzH-nd-si3"/>
+                        <outletCollection property="cardButtons" destination="MUx-pr-yvF" collectionClass="NSMutableArray" id="Nf0-17-Src"/>
+                        <outletCollection property="cardButtons" destination="Mbu-6p-si6" collectionClass="NSMutableArray" id="gkk-0F-Y3V"/>
+                        <outletCollection property="cardButtons" destination="Yw5-JT-757" collectionClass="NSMutableArray" id="5Hm-Pi-99d"/>
+                        <outletCollection property="cardButtons" destination="qes-uI-ou4" collectionClass="NSMutableArray" id="j2p-Sh-YdU"/>
+                        <outletCollection property="cardButtons" destination="gcO-xd-37B" collectionClass="NSMutableArray" id="9B9-M8-7D1"/>
+                        <outletCollection property="cardButtons" destination="gmf-EX-0CG" collectionClass="NSMutableArray" id="smv-u2-5VC"/>
+                        <outletCollection property="cardButtons" destination="5Bb-Xp-dv4" collectionClass="NSMutableArray" id="G1l-Qd-YXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="53.523238380809602"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="5Bb-Xp-dv4">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="6e7-wa-MJg">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="6zj-Tj-btK">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="704-EK-s1O">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="F5i-Cp-SoT">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="HmP-qH-OyB">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="J0B-kk-Jsa">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Lfu-FV-ycm">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Lj8-mK-DfN">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="MUx-pr-yvF">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Mbu-6p-si6">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="RAR-Z3-ES9">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="VsR-gn-EzY">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Yw5-JT-757">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="dZB-kn-bJn">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="f3R-cE-vMe">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="gcO-xd-37B">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="gmf-EX-0CG">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="ikl-2D-l0I">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="kAE-C1-a9f">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="qes-uI-ou4">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="rTL-j0-90J">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="svU-gX-PZh">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="xk7-uf-nsb">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

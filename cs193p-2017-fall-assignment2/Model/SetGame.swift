@@ -19,10 +19,11 @@ struct SetGame {
     private(set) var cardsChosen = [SetCard]()
     private(set) var cardsOnView = [SetCard]()
     private(set) var score = 0
+    private var isTestMode = false
 
     var isSet: Bool? {
             if cardsChosen.count == Self.cardsToDealAndCheckCount {
-                return SetCard.isSet(cardsToCheck: cardsChosen)
+                return isTestMode ? true : SetCard.isSet(cardsToCheck: cardsChosen)
             } else {
                 return nil
             }
@@ -59,6 +60,10 @@ struct SetGame {
             cardsToDeal.append(deck.removeFirst())
         }
         return cardsToDeal
+    }
+
+    mutating func toggleTestMode() {
+        isTestMode = !isTestMode
     }
 
     func canDealMoreCards(countToDeal: Int = Self.cardsToDealAndCheckCount) -> Bool {

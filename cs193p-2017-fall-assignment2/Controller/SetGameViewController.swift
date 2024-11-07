@@ -18,6 +18,14 @@ class SetGameViewController: UIViewController {
             getReadyToStart()
         }
     }
+    @IBOutlet weak var testModeCheckbox: UIButton!
+
+    @IBAction func touchTestMode(_ sender: UIButton) {
+        game.toggleTestMode()
+        sender.isSelected.toggle()
+        updateCheckbox(isChecked: sender.isSelected)
+        updateButtonsBordersFromModel()
+    }
 
     @IBAction func dealMoreCards(_ sender: UIButton) {
         game.dealCards()
@@ -35,6 +43,12 @@ class SetGameViewController: UIViewController {
         getReadyToStart()
         updateScore()
         updateDealCardsButtonState()
+        updateCheckbox(isChecked: false)
+    }
+
+    private func updateCheckbox(isChecked: Bool) {
+        let symbolName = isChecked ? "checkmark.square" : "square"
+        testModeCheckbox.setImage(UIImage(systemName: symbolName), for: .normal)
     }
 
     private func getReadyToStart() {
@@ -81,7 +95,10 @@ class SetGameViewController: UIViewController {
                 emptyButtons[index].card = newCards[index]
             }
         }
+        updateButtonsBordersFromModel()
+    }
 
+    private func updateButtonsBordersFromModel() {
         // set borders depends on matching or simply selected
         if let isMatched = game.isSet {
             for index in 0..<cardButtons.count {

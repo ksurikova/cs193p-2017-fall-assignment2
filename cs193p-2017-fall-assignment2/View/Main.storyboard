@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DhF-sm-VOD">
-                                <rect key="frame" x="5" y="49" width="365" height="220"/>
+                                <rect key="frame" x="5" y="55" width="365" height="220"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Y2v-Er-nP7">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="30"/>
@@ -245,27 +245,40 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nb7-Yw-cny" userLabel="DownStackView">
-                                <rect key="frame" x="5" y="743" width="365" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ppw-nY-1ll" userLabel="VerticalDownStackView">
+                                <rect key="frame" x="5" y="715" width="365" height="58"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWO-kA-jnV">
-                                        <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caS-P1-9ow">
-                                        <rect key="frame" x="182.66666666666663" y="0.0" width="182.33333333333337" height="30"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Play Again"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kls-4i-3fq" userLabel="TestModeButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="Enable Test Mode" buttonSize="small"/>
                                         <connections>
-                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FC2-dl-8R5"/>
+                                            <action selector="touchTestMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4R-zj-mdH"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nb7-Yw-cny" userLabel="DownStackView">
+                                        <rect key="frame" x="0.0" y="28" width="365" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWO-kA-jnV">
+                                                <rect key="frame" x="0.0" y="0.0" width="182.66666666666666" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caS-P1-9ow">
+                                                <rect key="frame" x="182.66666666666663" y="0.0" width="182.33333333333337" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Play Again"/>
+                                                <connections>
+                                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FC2-dl-8R5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIW-S7-k5h">
-                                <rect key="frame" x="131.66666666666666" y="277" width="112" height="474"/>
+                                <rect key="frame" x="131.66666666666666" y="283" width="112" height="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Deal more cards"/>
                                 <connections>
@@ -276,20 +289,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nb7-Yw-cny" secondAttribute="bottom" constant="5" id="CH5-nz-NsD"/>
-                            <constraint firstItem="nb7-Yw-cny" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="KZ3-dC-2fQ"/>
-                            <constraint firstItem="yIW-S7-k5h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lc3-We-IWg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nb7-Yw-cny" secondAttribute="trailing" constant="5" id="Ng2-S8-UtR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DhF-sm-VOD" secondAttribute="trailing" constant="5" id="TkH-Nj-dKx"/>
-                            <constraint firstItem="DhF-sm-VOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="k3c-yB-GEA"/>
-                            <constraint firstItem="yIW-S7-k5h" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nb7-Yw-cny" secondAttribute="top" constant="8" id="nb2-Tz-JP3"/>
-                            <constraint firstItem="DhF-sm-VOD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="rWe-iS-ZOz"/>
-                            <constraint firstItem="yIW-S7-k5h" firstAttribute="top" relation="lessThanOrEqual" secondItem="DhF-sm-VOD" secondAttribute="bottom" constant="8" id="xBk-lf-Zhp"/>
+                            <constraint firstItem="DhF-sm-VOD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-5" id="40q-gt-djG"/>
+                            <constraint firstItem="DhF-sm-VOD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lsw-NB-gep"/>
+                            <constraint firstItem="yIW-S7-k5h" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ons-np-97A"/>
+                            <constraint firstItem="yIW-S7-k5h" firstAttribute="top" secondItem="DhF-sm-VOD" secondAttribute="bottom" constant="8" id="QeQ-RO-62u"/>
+                            <constraint firstItem="DhF-sm-VOD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="Xku-w1-7q4"/>
+                            <constraint firstItem="DhF-sm-VOD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="YsN-NA-0TX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ppw-nY-1ll" secondAttribute="bottom" constant="5" id="czU-A9-MYO"/>
+                            <constraint firstItem="Ppw-nY-1ll" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="fvz-bN-J7a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ppw-nY-1ll" secondAttribute="trailing" constant="5" id="mUJ-k2-r7h"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dealCardsButton" destination="yIW-S7-k5h" id="tpk-EE-8IH"/>
                         <outlet property="scoreLabel" destination="ZWO-kA-jnV" id="h70-fh-Nhg"/>
+                        <outlet property="testModeCheckbox" destination="Kls-4i-3fq" id="uee-Wc-C03"/>
                         <outletCollection property="cardButtons" destination="dZB-kn-bJn" collectionClass="NSMutableArray" id="ULq-Fk-nMK"/>
                         <outletCollection property="cardButtons" destination="f3R-cE-vMe" collectionClass="NSMutableArray" id="yWK-Cg-2n4"/>
                         <outletCollection property="cardButtons" destination="Lfu-FV-ycm" collectionClass="NSMutableArray" id="O9P-vJ-Fa4"/>
@@ -318,84 +332,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29.600000000000001" y="53.523238380809602"/>
+            <point key="canvasLocation" x="29.600000000000001" y="53.201970443349758"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="5Bb-Xp-dv4">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="6e7-wa-MJg">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="6zj-Tj-btK">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="704-EK-s1O">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="F5i-Cp-SoT">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="HmP-qH-OyB">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="J0B-kk-Jsa">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="Lfu-FV-ycm">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="Lj8-mK-DfN">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="MUx-pr-yvF">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="Mbu-6p-si6">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="RAR-Z3-ES9">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="VsR-gn-EzY">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="Yw5-JT-757">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="dZB-kn-bJn">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="f3R-cE-vMe">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="gcO-xd-37B">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="gmf-EX-0CG">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="ikl-2D-l0I">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="kAE-C1-a9f">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="qes-uI-ou4">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="rTL-j0-90J">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="svU-gX-PZh">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-        <designable name="xk7-uf-nsb">
-            <size key="intrinsicContentSize" width="30" height="30"/>
-        </designable>
-    </designables>
     <resources>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

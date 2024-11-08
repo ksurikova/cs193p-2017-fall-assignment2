@@ -104,14 +104,15 @@ struct SetGame {
                 }
             }
         case Self.cardsToDealAndCheckCount:
-            if !cardsChosen.contains(card) {
-                if let isMatched = isSet {
-                    if isMatched {
-                        dealCards(replaceMatchingCards: isMatched)
-                    }
+            if let isMatched = isSet {
+                if isMatched {
+                    let newCardWasChosen = !cardsChosen.contains(card)
+                    dealCards(replaceMatchingCards: isMatched)
+                    if newCardWasChosen { cardsChosen.append(card) }
+                } else {
+                    cardsChosen.removeAll()
+                    cardsChosen.append(card)
                 }
-                cardsChosen.removeAll()
-                cardsChosen.append(card)
             }
         // else do nothing
         default:

@@ -43,6 +43,7 @@ class SetGameViewController: UIViewController {
         getReadyToStart()
         updateScore()
         updateDealCardsButtonState()
+        updateButtonsBordersFromModel()
         updateCheckbox(isChecked: false)
     }
 

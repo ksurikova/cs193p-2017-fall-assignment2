@@ -92,21 +92,14 @@ struct SetGame {
 
     mutating func chooseCard(card: SetCard) {
         guard cardsOnView.contains(card) else { return }
+        let newCardWasChosen = !cardsChosen.contains(card)
+        let setChecked = isSet
         switch cardsChosen.count {
-        case 0..<Self.cardsToDealAndCheckCount-1:
-            let wasAppend = cardsChosen.appendOrRemoveIfContains(card)
-            if !wasAppend { score -= Self.removeChoisePenaltyPoint }
-        case Self.cardsToDealAndCheckCount-1:
-            let wasAppend = cardsChosen.appendOrRemoveIfContains(card)
-            if !wasAppend { score -= Self.removeChoisePenaltyPoint } else {
-                if let changeScore = isSet {
-                    score = changeScore ? score+Self.setQuessPoint: score-Self.setNoQuessPenaltyPoint
-                }
-            }
+        case 0..<Self.cardsToDealAndCheckCount:
+            cardsChosen.appendOrRemoveIfContains(card)
         case Self.cardsToDealAndCheckCount:
-            if let isMatched = isSet {
+            if let isMatched = setChecked {
                 if isMatched {
-                    let newCardWasChosen = !cardsChosen.contains(card)
                     dealCards(replaceMatchingCards: isMatched)
                     if newCardWasChosen { cardsChosen.append(card) }
                 } else {
@@ -114,9 +107,18 @@ struct SetGame {
                     cardsChosen.append(card)
                 }
             }
-        // else do nothing
+            // else do nothing
         default:
             break
+        }
+        updateScore(selectedCardIsChosenAgain: !newCardWasChosen, isSet: setChecked)
+    }
+
+    mutating func updateScore(selectedCardIsChosenAgain: Bool, isSet: Bool?) {
+        if let changeScore = isSet {
+            score = changeScore ? score+Self.setQuessPoint: score-Self.setNoQuessPenaltyPoint
+        } else {
+            if selectedCardIsChosenAgain { score -= Self.removeChoisePenaltyPoint }
         }
     }
 }
@@ -131,12 +133,9 @@ extension Array where Element: Equatable {
         }
     }
 
-    mutating func appendOrRemoveIfContains(_ element: Element) -> Bool {
-        if removeIfContains(element) {
-            return false
-        } else {
+    mutating func appendOrRemoveIfContains(_ element: Element) {
+        if !removeIfContains(element) {
             self.append(element)
-            return true
         }
     }
 }

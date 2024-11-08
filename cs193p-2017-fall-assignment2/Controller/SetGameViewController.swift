@@ -68,7 +68,8 @@ class SetGameViewController: UIViewController {
 
     private func updateDealCardsButtonState() {
         dealCardsButton.isEnabled = game.canDealMoreCards()
-        && cardButtons.filter({ $0.card == nil }).count >= SetGame.cardsToDealAndCheckCount
+        && ( cardButtons.filter({ $0.card == nil }).count >= SetGame.cardsToDealAndCheckCount
+        || game.isSet == true )
     }
 
     private func updateScore() {
